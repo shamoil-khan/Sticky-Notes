@@ -1,0 +1,52 @@
+/* @media (prefers-color-scheme: dark) {
+  body {
+    --black-color: #000;
+    --main-bg: #202020;
+    --input-bg: #414141;
+    --placeholder: #ffffffa1;
+    --placeholder-active: #ffffff7e;
+    --notes-bg: #ffffff15;
+    --notes-active-bg: #ffffff38;
+    --scroll: #00000034;
+    --notes-hover: #ffffff2c;
+    --menu-hover: #ffffff17;
+    --border: #ffffff35;
+    --menu-border: #00000077;
+    --wh-color: #fff;
+    --icon-bg: #ffffff77;
+    --icon-hover-bg: #ffffffd2;
+    --profile-border: #aeaeae;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --black-color: #ccc;
+    --main-bg: #eee;
+    --input-bg: #aeaeae;
+    --placeholder: #ffffffa1;
+    --placeholder-active: #ffffff7e;
+    --notes-bg: #00000015;
+    --notes-active-bg: #ffffff38;
+    --scroll: #00000034;
+    --notes-hover: #0000002c;
+    --menu-hover: #00000017;
+    --border: #ffffff35;
+    --menu-border: #00000077;
+    --wh-color: #000;
+    --icon-bg: #00000077;
+    --icon-hover-bg: #000000d2;
+    --profile-border: #4d4949;
+  }
+} */
+
+body {
+  /*! Note Colors */
+  --yellow-bg: #e6b905;
+  --green-bg: #6fd262;
+  --pink-bg: #ea86c2;
+  --purple-bg: #c78eff;
+  --blue-bg: #5ac0e7;
+  --grey-bg: #aaaaaa;
+  --darkGrey-bg: #454545;
+}

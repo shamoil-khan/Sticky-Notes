@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/load.css" />
+    <link rel="stylesheet" href="./CSS/warning.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="icon" href="Icon/favicon.ico" />
+    <title>Imjex Notes</title>
+    <style id="styles"></style>
+  </head>
+  <body>
+    <!-- <div class="warning" id="warning">
+      <h1>imjex developer</h1>
+      <p>
+        Hi this is imjex, be careful using it because any information you save
+        here will be visible to everyone.We will fix this issue soon. If you
+        find any problem in this website or want to add any other features
+        please contact us at
+        <a
+          href="mailto:imjexdeveloper@gmail.com"
+          style="text-transform: lowercase"
+          >imjexdeveloper@gmail.com</a
+        >. Thanks
+      </p>
+      <button class="btn" id="termsOfUseBtn">OK</button>
+    </div> -->
+
+    <div id="loadContainer">
+      <div id="load">
+        <div id="load2"></div>
+      </div>
+    </div>
+
+    <div class="alertContainer">
+      <div class="alert">
+        <div class="icon" id="icon"></div>
+        <div class="mess" id="mess"></div>
+        <button class="btn">ok</button>
+      </div>
+    </div>
+
+    <div class="alertContainer delete">
+      <div class="alert">
+        <div class="icon" id="icon"></div>
+        <div class="mess" id="mess"></div>
+        <div class="btnDiv">
+          <button class="cancel">no</button>
+          <button class="ok">yes</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="noteInput">
+      <header>
+        <div class="menuIconInput" title="Menu">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="closeNote" title="Close Note"></div>
+      </header>
+      <div class="top">
+        <div class="colors">
+          <div data-color="#e6b905" class="color"></div>
+          <div data-color="#6fd262" class="color"></div>
+          <div data-color="#ea86c2" class="color"></div>
+          <div data-color="#c78eff" class="color"></div>
+          <div data-color="#5ac0e7" class="color"></div>
+          <div data-color="#aaaaaa" class="color activeColor"></div>
+          <div data-color="#454545" class="color"></div>
+        </div>
+        <div class="deleteNoteList">delete note</div>
+      </div>
+
+      <textarea
+        id="noteInputText"
+        cols="30"
+        rows="10"
+        placeholder="Take a note"
+      ></textarea>
+    </div>
+
+    <div class="container show" id="container">
+      <div class="settingContainer">
+        <header>
+          <div class="backIcon" title="Back"></div>
+          <h2>setting</h2>
+        </header>
+
+        <div class="profile" id="profile">
+          <img class="img" id="profileImg" alt="profile img" />
+          <div class="name" id="username"></div>
+          <div class="email" id="useremail"></div>
+          <div class="sign-out" id="signOut">log out</div>
+          <div class="loginGoogle" id="loginGoogle">login with google</div>
+        </div>
+
+        <div class="deleteContainer">
+          <h2>general</h2>
+          <label>
+            <input type="checkbox" name="deleteConfirm" id="deleteConfirm" />
+            <div class="delBtn"></div>
+            <p>confirm before deleting</p>
+          </label>
+        </div>
+
+        <div class="themeBox">
+          <h2>color</h2>
+          <label class="theme">
+            <div class="themeBtns dark" data-theme="dark"></div>
+            <p>dark</p>
+          </label>
+          <label class="theme">
+            <div class="themeBtns light" data-theme="light"></div>
+            <p>light</p>
+          </label>
+          <label class="theme">
+            <div class="themeBtns default" data-theme="default"></div>
+            <p>use my windows mode</p>
+          </label>
+        </div>
+      </div>
+
+      <header>
+        <div class="addIcon" title="New note"></div>
+        <div class="rightNavigation">
+          <div class="fullscreen" title="Maximize">←→</div>
+          <div class="settingIcon" title="Settings"></div>
+          <div class="close" title="Close Window"></div>
+        </div>
+      </header>
+
+      <div class="top">
+        <h2>
+          imjex notes
+
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.75 5.25a.75.75 0 0 0 0 1.5h11.5a.75.75 0 0 0 0-1.5H4.75ZM4.75 9.25a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5h-7.5ZM4 14a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5A.75.75 0 0 1 4 14ZM4.75 17.25a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5h-1.5Z"
+              fill="var(--wh-color)"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M21.192 8.308a2.04 2.04 0 0 0-2.884 0l-6.9 6.9a4.625 4.625 0 0 0-1.046 1.61l-.945 2.458a.625.625 0 0 0 .807.807l2.458-.945a4.625 4.625 0 0 0 1.61-1.046l6.9-6.9a2.04 2.04 0 0 0 0-2.884Zm-2 .884a.79.79 0 1 1 1.116 1.116l-.558.558-1.116-1.116.558-.558Zm-1.442 1.442L13.384 15l1.116 1.116 4.366-4.366-1.116-1.116Zm-5.458 5.458.208-.208L13.616 17l-.208.208a3.375 3.375 0 0 1-1.175.763l-.761.293-.236-.235.293-.762c.17-.441.43-.841.763-1.175Z"
+              fill="var(--wh-color)"
+            ></path>
+          </svg>
+        </h2>
+        <!-- <div class="inputContainer"> -->
+        <label class="inputContainer">
+          <input
+            type="text"
+            id="search"
+            placeholder="search notes..."
+            autocomplete="off"
+          />
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="var(--placeholder)"
+              d="M15.2 16.34a7.5 7.5 0 1 1 1.38-1.45l4.2 4.2a1 1 0 1 1-1.42 1.41l-4.16-4.16zm-4.7.16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
+            ></path>
+          </svg>
+        </label>
+        <!-- </div> -->
+      </div>
+
+      <div class="notesContainer"></div>
+    </div>
+
+    <footer>Copyright &copy; Imjex Developers All Rights Reserved</footer>
+
+    <script src="./JS/mobileDetect.js"></script>
+    <script src="./JS/app.js"></script>
+    <script src="./JS/theme.js"></script>
+    <script src="./JS/notes.js"></script>
+    <script src="./JS/alerts.js"></script>
+    <script src="./JS/account.js" type="module"></script>
+    <script src="./JS/load.js"></script>
+  </body>
+</html>
