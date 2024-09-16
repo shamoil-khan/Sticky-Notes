@@ -21,13 +21,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD0ozExIwDZoMVbcM2jy7fhr-T8bnaeqCE",
-  authDomain: "ij-note.firebaseapp.com",
-  projectId: "ij-note",
-  storageBucket: "ij-note.appspot.com",
-  messagingSenderId: "1093799508681",
-  appId: "1:1093799508681:web:6550bd14e8356e644feb18",
-  measurementId: "G-9TMMZPZ88V",
+  // your config
 };
 
 const app = initializeApp(firebaseConfig);
