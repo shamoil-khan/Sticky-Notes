@@ -33,7 +33,7 @@ body {
 .noteInput {
   --current-color: var(--grey-bg);
   position: fixed;
-  margin-left: 50%;
+  left: 50%;
   width: 300px;
   height: 250px;
   background: var(--input-bg);
@@ -44,7 +44,7 @@ body {
   transform: scale(0.7);
   pointer-events: none;
   opacity: 0;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 
   &.active {
     opacity: 1;
@@ -925,8 +925,8 @@ body.mobile {
 
 @media (max-width: 625px) {
   .noteInput {
-    margin-left: 0;
-    margin-top: 200px;
+    left: initial;
+    top: 45%;
   }
 }
 

@@ -6,37 +6,37 @@ document.addEventListener("contextmenu", (e) => {
 
 //! Main Constants
 
-const termsOfUseBtn = document.getElementById("termsOfUseBtn");
-const warningContainer = document.getElementById("warning");
-const mainContainer = document.querySelector(".container");
-const settingContainer = document.querySelector(".settingContainer");
-const notesContainer = document.querySelector(".notesContainer");
-const fullscreenIcon = document.querySelector(".fullscreen");
-const closeWindowIcon = document.querySelector(".close");
-const settingIcon = document.querySelector(".settingIcon");
-const settingBackIcon = document.querySelector(".backIcon");
-const noteInput = document.querySelector(".noteInput");
-const deleteNote_openNote = noteInput.querySelector(".deleteNoteList");
-const menuIconInput = noteInput.querySelector(".menuIconInput");
-const top_noteInput = noteInput.querySelector(".top");
-const colors = top_noteInput.querySelectorAll(".color");
-const takingNoteInput = noteInput.querySelector("textarea");
-const addIcon = document.querySelector(".addIcon");
-const closeNoteIcon = document.querySelector(".closeNote");
-const searchInput = document.getElementById("search");
-const deleteConfirm = document.getElementById("deleteConfirm");
-const delBtnSetting = document.querySelector(".delBtn");
-const deleteOk = document.querySelector(".alertContainer.delete .ok");
+// const termsOfUseBtn = document.getElementById("termsOfUseBtn");
+// const warningContainer = document.getElementById("warning");
+const mainContainer = document.querySelector(".container"),
+  settingContainer = document.querySelector(".settingContainer"),
+  notesContainer = document.querySelector(".notesContainer"),
+  fullscreenIcon = document.querySelector(".fullscreen"),
+  closeWindowIcon = document.querySelector(".close"),
+  settingIcon = document.querySelector(".settingIcon"),
+  settingBackIcon = document.querySelector(".backIcon"),
+  noteInput = document.querySelector(".noteInput"),
+  deleteNote_openNote = noteInput.querySelector(".deleteNoteList"),
+  menuIconInput = noteInput.querySelector(".menuIconInput"),
+  top_noteInput = noteInput.querySelector(".top"),
+  colors = top_noteInput.querySelectorAll(".color"),
+  takingNoteInput = noteInput.querySelector("textarea"),
+  addIcon = document.querySelector(".addIcon"),
+  closeNoteIcon = document.querySelector(".closeNote"),
+  searchInput = document.getElementById("search"),
+  deleteConfirm = document.getElementById("deleteConfirm"),
+  delBtnSetting = document.querySelector(".delBtn"),
+  deleteOk = document.querySelector(".alertContainer.delete .ok");
 
 // termsOfUseBtn.addEventListener("click", () => {
-// warningContainer.remove();
+//   warningContainer.remove();
 // });
 
 try {
   closeWindowIcon.addEventListener("click", () => {
-    if (document.body.classList.contains("mobile")) {
-      window.close();
-    }
+    // if (document.body.classList.contains("mobile")) {
+    window.close();
+    // }
   });
 } catch (er) {
   console.log(er);
@@ -427,7 +427,7 @@ function noteFunc() {
 
       takingNoteInput.value = e;
       j.classList.add("active");
-      takingNoteInput.addEventListener("keydown", () => {
+      takingNoteInput.addEventListener("input", () => {
         let activeNote = document.querySelector(".note.active");
         getText = takingNoteInput.value.trim();
         document
